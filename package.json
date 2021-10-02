@@ -1,0 +1,16 @@
+{
+  "name": "day05",
+  "version": "1.0.0",
+  "description": "",
+  "main": "heroku.js",
+  "scripts": {
+    "start": "node heroku.js",
+    "dev": "nodemon heroku.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
