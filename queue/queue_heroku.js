@@ -1,4 +1,3 @@
-
 var pushbtn = document.getElementById("pushbtn");
 var ans = document.getElementById("answer");
 var popbtn = document.getElementById("popbtn");
@@ -29,3 +28,6 @@ deletebtn.addEventListener("click", function(){
     arr=[]
     ans.innerText=arr
 })
+
+
+

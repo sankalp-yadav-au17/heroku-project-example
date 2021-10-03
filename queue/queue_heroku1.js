@@ -1,30 +1,19 @@
 const express = require ('express')
 const app = express ()
 app.use(express.urlencoded({extended:true}))
-app.use(express.json())
 
-const {MongoClient, ObjectId} = require('mongodb')
-const db_url = `mongodb+srv://queue_app:NnlgQuYNSTOEbv1f@cluster0.zu8fe.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
-const client = new MongoClient(db_url)
 
-// async function init(){
-//     await client.connect()
-//     db = client.db('queue_app')
-// }
-// init()
-
-app.get("/queue",async(req,res)=>{
-    console.log("reached here");
+app.get('/queue',(req,res)=>{
+    console.log("hi")
     res.sendFile(`${__dirname}/queue_heroku.html`)
 })
 
+app.get('/queue/queue_heroku.js',(req,res)=>{
+    res.sendFile(`${__dirname}/queue_heroku.js`)
+})
 
-console.log(`heroku port is ${process.env.PORT}`);
 const PORT = process.env.PORT || 3000
 
 app.listen(PORT,()=>{
-    console.log(`Server Started at ${PORT} port`);
+    console.log('Server started');
 })
-
-
-// https://heroku-exaple-app.herokuapp.com/queue
