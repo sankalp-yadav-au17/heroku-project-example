@@ -13,7 +13,7 @@ async function init(){
 }
 init()
 
-app.post("/",async(req,res)=>{
+app.post("/queue/",async(req,res)=>{
     console.log("comming from insomnia");
     console.log(req.body)
     const collection_ref = db.collection('details')
@@ -21,25 +21,25 @@ app.post("/",async(req,res)=>{
     res.json(insert_result)
 })
 
-app.get("/",async(req,res)=>{
+app.get("/queue/",async(req,res)=>{
     const collection_ref = db.collection('details')
     const all_products = await collection_ref.find({}).toArray()
     res.json(all_products)
 })
 
-app.get("/:uniqueId",async(req,res)=>{
+app.get("/queue/:uniqueId",async(req,res)=>{
     const collection_ref = db.collection('details')
     const one_product = await collection_ref.findOne({_id: new ObjectId(req.params.uniqueId)})
     res.json(one_product)
 })
 
-app.delete("/:uniqueId",async(req,res)=>{
+app.delete("/queue/:uniqueId",async(req,res)=>{
     const collection_ref = db.collection('details')
     const one_product = await collection_ref.deleteOne({"_id": new ObjectId(req.params.uniqueId)})
     res.json(one_product)
 })
 
-app.put("/:uniqueId",async(req,res)=>{
+app.put("/queue/:uniqueId",async(req,res)=>{
     const collection_ref = db.collection('details')
     const updating = await collection_ref.updateOne({_id: new ObjectId(req.params.uniqueId)},{$set:req.body})
      res.json(updating)
