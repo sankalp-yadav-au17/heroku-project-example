@@ -26,6 +26,7 @@ app.get("/",async(req,res)=>{
     const collection_ref = db.collection('book_details')
     const all_products = await collection_ref.find({}).toArray()
     res.json(all_products)
+    res.json(req.body)
 })
 
 app.get("/:uniqueId",async(req,res)=>{
