@@ -27,23 +27,7 @@ app.get("/queue/",async(req,res)=>{
     res.json(all_products)
 })
 
-app.get("/queue/:uniqueId",async(req,res)=>{
-    const collection_ref = db.collection('details')
-    const one_product = await collection_ref.findOne({_id: new ObjectId(req.params.uniqueId)})
-    res.json(one_product)
-})
 
-app.delete("/queue/:uniqueId",async(req,res)=>{
-    const collection_ref = db.collection('details')
-    const one_product = await collection_ref.deleteOne({"_id": new ObjectId(req.params.uniqueId)})
-    res.json(one_product)
-})
-
-app.put("/queue/:uniqueId",async(req,res)=>{
-    const collection_ref = db.collection('details')
-    const updating = await collection_ref.updateOne({_id: new ObjectId(req.params.uniqueId)},{$set:req.body})
-     res.json(updating)
-})
 
 console.log(`heroku port is ${process.env.PORT}`);
 const PORT = process.env.PORT || 3000
