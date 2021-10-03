@@ -2,7 +2,7 @@
   "name": "queue",
   "version": "1.0.0",
   "description": "",
-  "main": "queue_heroku.js",
+  "main": "queue_heroku1.js",
   "scripts": {
     "start": "node queue_heroku1.js",
     "dev": "nodemon queue_heroku1.js"
