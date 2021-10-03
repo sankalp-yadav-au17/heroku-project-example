@@ -12,30 +12,33 @@
     <script defer src="queue_heroku.js"></script>
 </head>
 <body>
-    <section class="container border ">
-        <section class="border d-flex justify-content-center align-items-center">
-            <section class="border p-2">
-                <div class="border mt-5 p-5 d-flex justify-content-center">
-                    <h1>Queue Emulator</h1>
-                </div>
-                <div class="border pt-3 d-flex justify-content-center">
-                    <p>The Number You Want Add To The Stack</p>
-                </div>
-                <div class="border d-flex justify-content-center">
-                    <input id="enter" type="text" placeholder="Enter the Number">
-                </div>
-                <div class="border mt-2 d-flex justify-content-center">
-                    <input id="pushbtn" class=" border-success border-2 rounded text-success bg-light me-2" type="button" value="Add">
-                    <input id="popbtn" class=" border-danger border-2 rounded text-danger bg-light me-2" type="button" value="Remove">
-                    <input id="deletebtn" class=" border-danger border-2 rounded text-light bg-danger me-2" type="button" value="Delete All">
-                </div>
-                <div class="border d-flex justify-content-center">
-                    <h1>[ <span id="answer"></span> ]</h1>
-                </div>
+    <form action="/queue" method="POST">
+        <section class="container border ">
+            <section class="border d-flex justify-content-center align-items-center">
+                <section class="border p-2">
+                    <div class="border mt-5 p-5 d-flex justify-content-center">
+                        <h1>Queue Emulator</h1>
+                    </div>
+                    <div class="border pt-3 d-flex justify-content-center">
+                        <p>The Number You Want Add To The Stack</p>
+                    </div>
+                    <div class="border d-flex justify-content-center">
+                        <input id="enter" type="text" placeholder="Enter the Number">
+                    </div>
+                    <div class="border mt-2 d-flex justify-content-center">
+                        <input id="pushbtn" class=" border-success border-2 rounded text-success bg-light me-2" type="button" value="Add">
+                        <input id="popbtn" class=" border-danger border-2 rounded text-danger bg-light me-2" type="button" value="Remove">
+                        <input id="deletebtn" class=" border-danger border-2 rounded text-light bg-danger me-2" type="button" value="Delete All">
+                    </div>
+                    <div class="border d-flex justify-content-center">
+                        <h1>[ <span id="answer"></span> ]</h1>
+                    </div>
+                </section>
+                
             </section>
-            
+        
         </section>
+    </form>
     
-    </section>
 </body>
 </html>
