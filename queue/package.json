@@ -4,8 +4,8 @@
   "description": "",
   "main": "queue_heroku.js",
   "scripts": {
-    "start": "node queue_heroku.js",
-    "dev": "nodemon queue_heroku.js"
+    "start": "node queue_heroku1.js",
+    "dev": "nodemon queue_heroku1.js"
   },
   "keywords": [],
   "author": "",
