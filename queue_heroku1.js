@@ -3,7 +3,7 @@ const app = express ()
 app.use(express.urlencoded({extended:true}))
 
 
-app.get('/queue',(req,res)=>{
+app.get('/',(req,res)=>{
     console.log("hi")
     res.sendFile(`${__dirname}/queue_heroku.html`)
 })
