@@ -8,7 +8,7 @@ app.get('/queue',(req,res)=>{
     res.sendFile(`${__dirname}/queue_heroku.html`)
 })
 
-app.get('/queue/queue_heroku.js',(req,res)=>{
+app.get('/queue_heroku.js',(req,res)=>{
     res.sendFile(`${__dirname}/queue_heroku.js`)
 })
 
