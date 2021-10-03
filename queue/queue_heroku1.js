@@ -13,6 +13,11 @@ async function init(){
 }
 init()
 
+app.get("/queue",async(req,res)=>{
+    console.log("reached here");
+    res.sendFile(`${__dirname}/queue_heroku.html`)
+})
+
 app.post("/queue/",async(req,res)=>{
     console.log("comming from insomnia");
     console.log(req.body)
